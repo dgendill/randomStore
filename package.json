@@ -1,0 +1,21 @@
+{
+  "name": "randomStore",
+  "scope": "dgendill",
+  "version": "1.0.0",
+  "description": "Manually store and retrieve random values with localStorage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --watch --compilers js:@babel/register --require mock-local-storage"
+  },
+  "keywords": [
+    "random",
+    "localStorage"
+  ],
+  "author": "dgendill",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
