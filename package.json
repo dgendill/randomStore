@@ -1,11 +1,17 @@
 {
-  "name": "randomStore",
+  "name": "random-store",
   "scope": "dgendill",
   "version": "1.0.0",
   "description": "Manually store and retrieve random values with localStorage.",
-  "main": "index.js",
+  "main": "randomStore.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/dgendill/randomStore"
+  },
   "scripts": {
-    "test": "mocha --watch --compilers js:@babel/register --require mock-local-storage"
+    "test": "mocha --watch --compilers js:@babel/register --require mock-local-storage",
+    "build": "node-minify --compressor uglify-es --input 'index.js' --output 'randomStore.js'",
+    "test-publish": "npm publish --dry-run"
   },
   "keywords": [
     "random",
@@ -15,6 +21,8 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/register": "^7.0.0",
+    "@node-minify/cli": "^4.1.0",
+    "@node-minify/uglify-es": "^4.0.5",
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
   }
